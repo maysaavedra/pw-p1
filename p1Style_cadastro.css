@@ -4,7 +4,47 @@
     padding:0;
     font-family: Arial,sans-serif;
   }
-   
+  header {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    background-color: rgb(241, 212, 235);
+    color: rgb(0, 191, 255);
+    font-family: 'The Sims Sans Bold';
+    font: bold;
+    
+}
+h1	{
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.busca{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20%;
+    
+}
+.cadastro{
+    padding-top: 20px;    
+    padding-bottom: 20px;
+    padding-left: 30%;
+    font-family: 'Times New Roman', Times, serif;
+    
+
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+ 
   /* remove a linha dos links */
   a{
     text-decoration: none;
@@ -20,7 +60,7 @@
     margin: 0px auto;
     position: relative;   
   }
-  h1{
+  h2{
     font-size: 48px;
     color: #066a75;
     padding: 2px 0 10px 0;
@@ -29,7 +69,7 @@
     text-align: center;
     padding-bottom: 30px;
   }
-  h1:after{
+  h2:after{
     content: ' ';
     display: block;
     width: 100%;
