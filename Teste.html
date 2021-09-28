@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="teste.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -14,181 +18,123 @@
 </head>
 <body>
   
-  <header>    
-      <h1>PLOPSY<img src="images/logo_plopsy-removebg-preview.png" alt="some text" width=100 height=60></h1>
-      
-      <div class="busca">
-        <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="O que você está procurando?">
-          <button class="btn btn-info" type="submit">Pesquisar</button>
-        </form>
-      </div>  
-      <div class="cadastro">
-        <a href="p1_cadastro.html">Cadastre-se
-        <img src="images/BagHead.png" width=60 height=60></a>
-        
-      </div>
-      
-  </header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
     </button>
-  
+
+    <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-        </li>        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Conforto
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a href="#">Cadeiras de estar</a>
-            <a href="#">Cadeiras de jantar</a>
-            <a href="#">Cadeiras de escrivaninha</a>
-            <a href="#">Sofás</a>
-            <a href="#">Namoradeiras</a>
-            <a href="#">Camas</a> 
-            <a href="#">Móveis externos</a> 
-            <a href="#">Diversos</a>    
-          </div>
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+          height="15"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Superfícies
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="#">Mesa de Centro</a>
-              <a href="#">Mesa de Jantar</a>
-              <a href="#">Mesa de Apoio</a>
-              <a href="#">Vitrines</a>
-              <a href="#">Escrivaninhas</a>
-              <a href="#">Bancadas</a> 
-              <a href="#">Armários</a> 
-              <a href="#">Diversos</a>    
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Encanamento
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Pias</a>
-                <a href="#">Privadas</a>
-                <a href="#">Chuveiros</a>
-                <a href="#">Banheiras</a>
-                <a href="#">Diversos</a>    
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Atividade e Habilidade
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Conhecimento</a>
-                <a href="#">Criativa</a>
-                <a href="#">Recreação</a>
-                <a href="#">Ativas</a>
-                <a href="#">Atividades ao Ar Livre</a>             
-                <a href="#">Diversos</a>       
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Decoração
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Plantas Externas</a>
-                <a href="#">Pinturas e Pôsters</a>
-                <a href="#">Espelhos</a> 
-                <a href="#">Cobertura de Janelas</a>
-                <a href="#">Esulturas</a>
-                <a href="#">Decoração de Teto</a>
-                <a href="#">Tapetes</a>
-                <a href="#">Lareiras</a>
-                <a href="#">Decoração de Parede</a>
-                <a href="#">Bagunça</a>
-                <a href="#">Diversos</a>    
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Animais
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Cuidados com animais</a>
-                <a href="#">Binquedos para animais</a>
-                <a href="#">Mobilia para animais</a>            
-                <a href="#">Diversos</a>  
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Infantil
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Decorações Infantis</a>
-                <a href="#">Móveis Infantis </a>
-                <a href="#">Brinquedos</a> 
-                <a href="#">Atividades Infantis</a>
-                <a href="#">Bebês</a>
-                <a href="#">Bancadas</a>              
-                <a href="#">Diversos</a> 
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Iluminação
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a href="#">Luminária de Mesa</a>
-                  <a href="#">Luminária de Piso</a>
-                  <a href="#">Luzes Externas</a> 
-                  <a href="#">Luzes de Parede</a>
-                  <a href="#">Lustres</a>               
-                  <a href="#">Diversos</a> 
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Eletrônicos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Televisões</a>
-                <a href="#">Computadores</a>
-                <a href="#">Áudio</a> 
-                <a href="#">Alarmes</a>                 
-                <a href="#">Diversos</a> 
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Eletrodomésticos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Geladeiras</a>
-                <a href="#">Fogões</a>
-                <a href="#">Utensílios de cozinha</a> 
-                <a href="#">Culinária externa</a>                   
-                <a href="#">Diversos</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Armazenagem
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#">Estantes</a>
-                <a href="#">Comodas</a>                      
-                <a href="#">Diversos</a>
-            </div>
-          </li>        
-      </ul>      
+        <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+      </ul>
+      <!-- Left links -->
     </div>
-  </nav>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-reset me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <a
+        class="text-reset me-3 dropdown-toggle hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+        <li>
+          <a class="dropdown-item" href="#">Some news</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Another news</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+
+      <!-- Avatar -->
+      <a
+        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+          class="rounded-circle"
+          height="25"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+        <li>
+          <a class="dropdown-item" href="#">My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+
 
 
   

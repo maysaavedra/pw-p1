@@ -28,7 +28,7 @@
         <a class="nav-link" href="p1_home.html">Início <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="p1_produtos.html">Produtos</a>
+        <a class="nav-link" href="#">Produtos</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,50 +61,8 @@
 
  
 
-  <div class="container-fluid">   
-  
-      <div id="demo" class="carousel slide" data-ride="carousel">
-
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
+  <div class="container-fluid">      
       
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <img src="images/theSims.png" alt="img.png" width="690" height="388">
-               
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <img src="images/the-sims-4-the-sims-are-back.jpg" alt="img.png">
-            </div>
-        </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <img src="images/sims-stay-and-play-placeholder.png" alt="img.png" width="690" height="388">
-            </div>
-          </div>
-        </div>
-      
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      
-      </div>
-
-      <div>
-        <h2>Mais vendidos</h2>
-      </div>
   
       <div class="row">
         <!-- Gallery item -->
@@ -280,7 +238,17 @@
         </div>
         <!-- End -->
       
-  </div>  
+  </div>
 
 </body>
 </html>
+<script>
+  function AddCarrinho(produto, qtd, valor, posicao)
+  {
+    localStorage.setItem("produto" + posicao, produto);
+    localStorage.setItem("qtd" + posicao, qtd);
+    valor = valor * qtd;
+    localStorage.setItem("valor" + posicao, valor);
+    alert("Produto adicionado ao SIMScarrinho!");
+  }
+</script>

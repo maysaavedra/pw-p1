@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Plopsy</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="p1Style_cadastro.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+</head>
+<header>
+  <h1>PLOPSY<img src="images/logo_plopsy-removebg-preview.png" alt="some text" width=140 height=100></h1>
+ </header>
+<body>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="p1_home.html">Início <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produtos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Itens
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>          
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-0" type="search" placeholder="Buscar itens" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">          
+          <a class="nav-link" href="p1_cadastro.html"><span class="material-icons md-dark">face</span> Cadastro</a>
+        </li>
+        <li class="nav-item">         
+            <a class="nav-link" href="p1_carrinho.html"> <span class="material-icons">shopping_cart</span> Carrinho</a>
+        </li>
+        
+    </ul>
+    </div>
+  </nav>
+
+  
+<div class="container">
+  
+    <body>
+      <p>
+        <div class="container2">
+          <h3>Carrinho</h3>            
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantidade</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="itens2"></td>
+                  <td id="itens3"></td>
+                  <td id="itens"></td>
+                </tr>
+                <tr>
+                  <td>Total:</td>
+                    <td></td>
+                    <td>R$ <span id="total"></span></td>
+                </tr>
+              </tbody>
+            </table>
+        </div> 
+      </p>         
+            
+                        
+
+                           
+  <button type="button" class="btn btn-info" style="float: left"  onclick=" localStorage.clear(); location.reload();">
+    Limpar carrinho </button>
+  <button type="button" style="float: right" class="btn btn-info" onclick=""> Finalizar </button> 
+                          
+                    
+          
+</body>
+</html>
+
+<script>
+  var total = 0; // variável que retorna o total dos produtos que estão na LocalStorage.
+  var i = 0;     // variável que irá percorrer as posições
+  var valor = 0; // variável que irá receber o preço do produto convertido em Float.
+      for(i=1; i<=99; i++) // verifica até 99 produtos registrados na localStorage
+      {
+       var prod = localStorage.getItem("produto" + i + ""); // verifica se há itens nesta posição. 
+       if(prod != null) 
+        {	
+          // exibe os dados da lista dentro da div itens
+          document.getElementById("itens3").innerHTML += localStorage.getItem("qtd" + i) + " x "  + "<br/>";
+          document.getElementById("itens2").innerHTML += localStorage.getItem("produto" + i)  + "<br/>";
+          document.getElementById("itens").innerHTML += " ";
+          document.getElementById("itens").innerHTML += "R$ " + localStorage.getItem("valor" + i) + "<br/>";
+                                    
+          // calcula o total dos itens
+          valor = parseFloat(localStorage.getItem("valor" + i)); // valor convertido com o parseFloat()
+          total = (total + valor); // arredonda para 2 casas decimais com o .toFixed(2)
+        }
+      } 
+       // exibe o total dos itens
+        document.getElementById("total").innerHTML = total.toFixed(2); 
+ </script>
