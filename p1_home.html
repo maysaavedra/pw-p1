@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Plopsy</title>
+  <title>Plopsy | HOME</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href= "p1Style_home.css">
@@ -12,11 +12,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
 </head>
-<header>
-  <h1>PLOPSY <img src="images/logo_plopsy-removebg-preview.png" alt="some text" width=140 height=100></h1>
+  <header>
+    <a class="header_logo" href="p1_home.html"><img src="images/logo_plopsy-removebg-preview.png" alt="logo" width=140 height=100></a>
+    <h1>PLOPSY</h1>
  </header>
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
       
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,10 +36,9 @@
           Itens
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Jardinagem</a>
+          <a class="dropdown-item" href="#">Eletônicos</a>          
+          <a class="dropdown-item" href="#">Decorações</a>
         </div>
       </li>          
     </ul>
@@ -56,10 +56,9 @@
       
   </ul>
   </div>
-</nav>
- <body>
+  </nav>
 
- 
+ <body>
 
   <div class="container-fluid">   
   
@@ -101,186 +100,42 @@
         </a>
       
       </div>
-
-      <div>
-        <h2>Mais vendidos</h2>
-      </div>
-  
+      
+  </div> 
+  <div class="container" >
+    <div class="MaisVendidos">
+      <h2>Mais vendidos</h2>
+    </div>
+    
       <div class="row">
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="col-md-4">
           <div class="bg-white rounded shadow-sm"><a href="p1_descricao_planVaca.html"><img src="images/plantaVacaEvolution.jpg" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="p1_descricao_planVaca.html" class="text-dark">Planta-Vaca</a></h5>
-              <p class="small text-muted mb-0">$200</p> 
-              <input type="number" value="1" min="1" max="10" id="qtd1">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Planta-Vaca', 
-               document.getElementById('qtd1').value, '200.00', 1)"> Comprar </button>             
-            </div>
+          <div class="p-4">
+            <h5> <a href="p1_descricao_planVaca.html" class="text-dark">Planta-Vaca</a></h5>
+            <p class="small text-muted mb-0">$200</p>                       
           </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="p1_descricao_peDeGrana.html"><img src="images/MoneyTreeSeed.png" width="250" height="200" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="p1_descricao_peDeGrana.html" class="text-dark">Pé de Grana</a></h5>
-              <p class="small text-muted mb-0">$5.000</p>
-              <input type="number" value="1" min="1" max="10" id="qtd2">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Pé de Grana', 
-               document.getElementById('qtd2').value, '5000.00', 2)"> Comprar </button>
-              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        </div></div>
+        <div class="col-md-4">
           <div class="bg-white rounded shadow-sm"><a href="p1_descricao_gerador.html"><img src="images/geradorBuracoMinhoca.png" alt="" class="img-fluid card-img-top"></a>
             <div class="p-4">
               <h5> <a href="p1_descricao_gerador.html" class="text-dark">Gerador de Buraco de Minhoca de Eletrofluxo</a></h5>
-              <p class="small text-muted mb-0">$1.400</p>  
-              <input type="number" value="1" min="1" max="10" id="qtd3">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Gerador de Buraco de Minhoca de Eletrofluxo', 
-              document.getElementById('qtd3').value, '1400.00', 3)"> Comprar </button>            
+              <p class="small text-muted mb-0">$1.400</p>                          
             </div>
           </div>
         </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="p1_descricao_esteira.html"><img src="images/esteiradeEscaladaSuzsseco.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="p1_descricao_esteira.html" class="text-dark">Esteira de Escalada Suzcesso</a></h5>
-              <p class="small text-muted mb-0">$2.600</p> 
-              <input type="number" value="1" min="1" max="10" id="qtd4">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Esteira de Escalada Suzcesso', 
-               document.getElementById('qtd4').value, '2600.00', 4)"> Comprar </button>              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="col-md-4">
           <div class="bg-white rounded shadow-sm"><a href="p1_descricao_bolaCristal.html"><img src="images/BolaDeCristal.png" alt="" class="img-fluid card-img-top"></a>
             <div class="p-4">
               <h5> <a href="p1_descricao_bolaCristal.html" class="text-dark">Bola de Cristal da Sra. Rosalina</a></h5>
-              <p class="small text-muted mb-0">$75</p> 
-              <input type="number" value="1" min="1" max="10" id="qtd5">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Bola de Cristal da Sra. Rosalina', 
-               document.getElementById('qtd3').value, '75.00', 5)"> Comprar </button>             
+              <p class="small text-muted mb-0">$75</p>                                    
             </div>
           </div>
         </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="p1_descricao_laboratorio.html"><img src="images/laboratorioQuimico.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="p1_descricao_laboratorio.html" class="text-dark">Laboratório Químico</a></h5>
-              <p class="small text-muted mb-0">$1.000</p>
-              <input type="number" value="1" min="1" max="10" id="qtd6">
-              <button type="button"  id="adicionar1" id="produto1"  
-              onclick="AddCarrinho('Laboratório Químico', document.getElementById('qtd6').value, '1000.00', 6)"> Comprar </button>              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="#"><img src="images/palhares.png" alt="" class="img-fluid card-img-top"><a href="#"></a>
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">Palhares, o Espantalho</a></h5>
-              <p class="small text-muted mb-0">$400</p>
-              <input type="number" value="1" min="1" max="10" id="qtd7">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Palhares, o Espantalho', 
-               document.getElementById('qtd7').value, '400.00', 7)"> Comprar </button>
-              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="#"><img src="images/capsulaSono.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">Cápsula do Sono Carneirinho</a></h5>
-              <p class="small text-muted mb-0">$3.500</p>
-              <input type="number" value="1" min="1" max="10" id="qtd8">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Cápsula do Sono Carneirinho', 
-               document.getElementById('qtd8').value, '3500.00', 8)"> Comprar </button>
-              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="#"><img src="images/conservadorDeMomento.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">Conservador de Momento</a></h5>
-              <p class="small text-muted mb-0">$400</p> 
-              <input type="number" value="1" min="1" max="10" id="qtd9">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Cápsula do Sono Carneirinho', 
-               document.getElementById('qtd9').value, '400.00', 9)"> Comprar </button>              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="p1_descricao_observador.html"><img src="images/telescopio.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="p1_descricao_observador.html" class="text-dark">Observatório de Quintal</a></h5>
-              <p class="small text-muted mb-0">$1.500</p>
-              <input type="number" value="1" min="1" max="10" id="qtd10">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Observatório de Quintal', 
-               document.getElementById('qtd10').value, '1500.00', 10)"> Comprar </button>
-              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="#"><img src="images/tv.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">TelevisãoHD CurV com Tela Antiplana</a></h5>
-              <p class="small text-muted mb-0">$4.200</p>
-              <input type="number" value="1" min="1" max="10" id="qtd11">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('TelevisãoHD CurV com Tela Antiplana', 
-               document.getElementById('qtd11').value, '4200.00', 11)"> Comprar </button>
-              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-  
-        <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-          <div class="bg-white rounded shadow-sm"><a href="#"><img src="images/tapeteJogos.png" alt="" class="img-fluid card-img-top"></a>
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">Tapete de Jogo Monitor de Movimento</a></h5>
-              <p class="small text-muted mb-0">$3.375</p> 
-              <input type="number" value="1" min="1" max="10" id="qtd12">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Tapete de Jogo Monitor de Movimento', 
-               document.getElementById('qtd12').value, '3375.00', 12)"> Comprar </button>              
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-      
-  </div>  
+      </div>
+    
+
+
+  </div>
 
 </body>
 </html>
