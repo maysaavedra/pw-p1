@@ -61,10 +61,9 @@
   </nav>
 
   
-<div class="container">
-  
-    <body>
-      <p>
+<div class="container"> 
+    
+  <p>
         <div class="container2">
           <h3>Carrinho</h3>            
             <table class="table">
@@ -89,18 +88,13 @@
               </tbody>
             </table>
         </div> 
-      </p>         
-            
-                        
-
-                           
+  </p>                             
   <button type="button" class="btn btn-info" style="float: left"  onclick=" localStorage.clear(); location.reload();">
     Limpar carrinho </button>
-  <button type="button" style="float: right" class="btn btn-info" onclick=""> Finalizar </button> 
-                          
-                    
-          
-</body>
+  <button type="button" style="float: right" class="btn btn-info" onclick= "final()" > Finalizar </button> 
+</div>    
+</body>    
+
 </html>
 
 <script>
@@ -125,4 +119,13 @@
       } 
        // exibe o total dos itens
         document.getElementById("total").innerHTML = total.toFixed(2); 
+        
+        
+        //função para o botão finalizar
+
+        function final()
+        {
+        location.href="p1_final.html"
+        }
+
  </script>
