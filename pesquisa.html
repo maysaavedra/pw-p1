@@ -45,7 +45,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-0" type="search" placeholder="Buscar itens" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit" href="pesquisa.html">Buscar</button>
+      <button class="btn btn-outline-info my-2 my-sm-0" type="button" onclick="pesquisar()">Buscar</button>
     </form>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">          
@@ -76,7 +76,7 @@
               <h5> <a href="#" class="text-dark">Planta-Vaca</a></h5>
               <p class="small text-muted mb-0">$200</p> 
               <input type="number" value="1" min="1" max="10" id="qtd1">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Planta-Vaca', 
+              <button class="btn btn-outline-info" type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Planta-Vaca', 
                document.getElementById('qtd1').value, '200.00', 1)"> Comprar </button>             
             </div>
           </div>
@@ -91,7 +91,7 @@
               <h5> <a href="#" class="text-dark">Pé de Grana</a></h5>
               <p class="small text-muted mb-0">$5.000</p>
               <input type="number" value="1" min="1" max="10" id="qtd2">
-              <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Pé de Grana', 
+              <button class="btn btn-outline-info" type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Pé de Grana', 
                document.getElementById('qtd2').value, '5000.00', 2)"> Comprar </button>
             </div>
           </div>
@@ -106,7 +106,7 @@
                 <h5> <a href="#" class="text-dark">Gerador de Buraco de Minhoca de Eletrofluxo</a></h5>
                 <p class="small text-muted mb-0">$1.400</p>
                 <input type="number" value="1" min="1" max="10" id="qtd3">
-                <button type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Gerador de Buraco de Minhoca de Eletrofluxo', 
+                <button class="btn btn-outline-info" type="button"  id="adicionar1" id="produto1" onclick="AddCarrinho('Gerador de Buraco de Minhoca de Eletrofluxo', 
                  document.getElementById('qtd3').value, '1400.00', 3)"> Comprar </button>              
               </div>
             </div>
@@ -138,4 +138,8 @@
       localStorage.setItem("valor" + posicao, valor);
       alert("Produto adicionado ao SIMScarrinho!");
     }
+    function pesquisar(){
+          location.href="pesquisa.html";
+        }
+
 </script>
